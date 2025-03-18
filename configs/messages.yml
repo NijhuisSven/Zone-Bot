@@ -1,6 +1,15 @@
+# Placeholders:
+#   ${interaction.user.username} - The username of the user who interacted with the bot
+#   ${interaction.user.id} - The ID of the user who interacted with the bot
+#   ${interaction.user.tag} - The tag of the user who interacted with the bot
+#   ${interaction.guild.name} - The name of the guild where the interaction occurred
+#   ${interaction.guild.id} - The ID of the guild where the interaction occurred
+#   ${interaction.channel.name} - The name of the channel where the interaction occurred
+#   ${interaction.channel.id} - The ID of the channel where the interaction occurred
+#   ${ping} - The ping of the bot
 interactionError:
   title: "Error"
   message: "An error occurred while processing your request. Please try again later."
 ping:
   title: "Ping"
-  message: "Pong!"
+  message: "Pong! ${ping}ms"

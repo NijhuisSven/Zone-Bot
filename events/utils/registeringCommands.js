@@ -3,7 +3,6 @@ module.exports = {
     name: 'ready',
     once: true,
     async execute(client) {
-
         try {
             const commands = client.commands.map(command => command.data.toJSON());
 
