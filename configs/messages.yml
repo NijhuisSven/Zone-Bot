@@ -1,0 +1,6 @@
+interactionError:
+  title: "Error"
+  message: "An error occurred while processing your request. Please try again later."
+ping:
+  title: "Ping"
+  message: "Pong!"

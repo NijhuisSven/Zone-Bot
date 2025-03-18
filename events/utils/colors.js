@@ -1,3 +1,4 @@
+
 const colors = {
     reset: "\x1b[0m",
     bright: "\x1b[1m",
@@ -14,10 +15,10 @@ const colors = {
     magenta: "\x1b[35m",
     cyan: "\x1b[36m",
     white: "\x1b[37m",
-    debug: "\x1b[36m[DEBUG]\x1b[0m ",
-    warn: "\x1b[33m[WARN]\x1b[0m ",
-    error: "\x1b[31m[ERROR]\x1b[0m ",
-    load: "\x1b[32m[LOADED]\x1b[0m "
+    debugc: "\x1b[36m[DEBUG]\x1b[0m ",
+    warnc: "\x1b[33m[WARN]\x1b[0m ",
+    errorc: "\x1b[31m[ERROR]\x1b[0m ",
+    loadc: "\x1b[32m[LOADED]\x1b[0m "
 
 };
 

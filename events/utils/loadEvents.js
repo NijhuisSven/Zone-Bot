@@ -15,7 +15,7 @@ function loadEvents(client, directory = path.join(__dirname, '..', '..', 'events
             } else {
                 client.on(event.name, (...args) => event.execute(...args, client));
             }
-            console.log(colors.load + `Loaded event: ${event.name} from ${fullPath}`);
+            console.log(colors.loadc + `Loaded event: ${event.name} from ${fullPath}`);
         }
     }
 }

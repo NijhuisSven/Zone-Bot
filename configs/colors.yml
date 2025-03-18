@@ -1,0 +1,6 @@
+colors:
+  primary: '#007bff'
+  secondary: '#6c757d'
+  error: '#dc3545'
+  success: '#28a745'
+  warning: '#ffc107'

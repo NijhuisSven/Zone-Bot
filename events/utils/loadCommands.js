@@ -13,9 +13,9 @@ function loadCommands(client) {
         if ('data' in command && 'execute' in command) {
             // Add to the client's collection using set
             client.commands.set(command.data.name, command);
-            console.log(colors.load + `Loaded command: ${command.data.name} from ${filePath}`);
+            console.log(colors.loadc + `Loaded command: ${command.data.name} from ${filePath}`);
         } else {
-            console.warn(colors.warn + `The command at ${filePath} is missing a required "data" or "execute" property.`);
+            console.warn(colors.warnc + `The command at ${filePath} is missing a required "data" or "execute" property.`);
         }
     }
 }

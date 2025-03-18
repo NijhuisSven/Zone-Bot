@@ -8,9 +8,9 @@ module.exports = {
             const commands = client.commands.map(command => command.data.toJSON());
 
             await client.application.commands.set(commands);
-            console.log(colors.load + 'All commands registered:', commands.map(cmd => cmd.name).join(', '));
+            console.log(colors.loadc + 'All commands registered:', commands.map(cmd => cmd.name).join(', '));
         } catch (error) {
-            console.error(colors.error + 'Error registering commands:', error);
+            console.error(colors.errorc + 'Error registering commands:', error);
         }
     },
 };
