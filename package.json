@@ -1,0 +1,22 @@
+{
+  "name": "zone-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SvennsDev/Zone-Bot.git"
+  },
+  "author": "NijhuisSven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SvennsDev/Zone-Bot/issues"
+  },
+  "homepage": "https://github.com/SvennsDev/Zone-Bot#readme",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^14.18.0"
+  }
+}
