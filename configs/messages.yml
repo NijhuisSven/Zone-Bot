@@ -9,6 +9,7 @@
 #   ${user} - The user that was mentioned in the interaction
 #   ${reason} - The reason that was provided in the interaction
 #   ${action} - The action that was performed in the interaction
+#   ${other} - Any other information that was provided in the interaction such as the duration of a timeout
 #   ${ping} - The ping of the bot
 interactionError:
   title: "Error"
@@ -19,6 +20,7 @@ moderationLogs:
     **User:** ${user}
     **Moderator:** ${interaction.user.tag}
     **Reason:** ${reason}
+    **Other Information:** ${other}
 ping:
   title: "Ping"
   message: "Pong! ${ping}ms"
@@ -29,3 +31,17 @@ kick:
 kickUser:
   title: "Kicked!"
   message: "You have been kicked from **${interaction.guild.name}** for **${reason}**"
+ban:
+  title: "Ban"
+  message: "Successfully banned ${user} for ${reason}"
+  error: "I was unable to ban ${user} for ${reason}"
+banUser:
+  title: "Banned!"
+  message: "You have been banned from **${interaction.guild.name}** for **${reason}**"
+timeout:
+  title: "Timeout"
+  message: "Successfully timed out ${user} for ${time} minutes for ${reason}"
+  error: "I was unable to time out ${user} for ${time} minutes for ${reason}"
+timeoutUser:
+  title: "Timed Out!"
+  message: "You have been timed out from **${interaction.guild.name}** for **${time}** minutes for **${reason}**"

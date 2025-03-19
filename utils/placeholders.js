@@ -10,7 +10,8 @@ function replacePlaceholders(message, interaction) {
         .replace('${interaction.channel.id}', interaction.channel.id)
         .replace('${ping}', Math.round(interaction.client.ws.ping))
         .replace('${user}', interaction.options.getUser('user'))
-        .replace('${reason}', interaction.options.getString('reason'));
+        .replace('${reason}', interaction.options.getString('reason'))
+        .replace('${time}', interaction.options.getInteger('time'));
 }
 
 module.exports = { replacePlaceholders };

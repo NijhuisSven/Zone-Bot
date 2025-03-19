@@ -12,14 +12,14 @@ module.exports = {
         .setName('kick')
         .setDescription('Replies with Pong!')
         .addUserOption(option => option.setName('user').setDescription('The user to kick').setRequired(true))
-        .addStringOption(option => option.setName('reason').setDescription('The reason for the kick')),
+        .addStringOption(option => option.setName('reason').setDescription('The reason for the kick').setRequired(true)),
     async execute(interaction) {
         const title = replacePlaceholders(messages.kick.title, interaction);
         const message = replacePlaceholders(messages.kick.message, interaction);
         const userTitle = replacePlaceholders(messages.kickUser.title, interaction);
         const userMessage = replacePlaceholders(messages.kickUser.message, interaction);
 
-        const user = interaction.options.getUser('user');
+        const user = interaction.options.getMember('user');
         const reason = interaction.options.getString('reason');
 
         const kickEmbed = new EmbedBuilder()
@@ -32,10 +32,10 @@ module.exports = {
             .setDescription(userMessage)
             .setTimestamp();
 
-        user.kick(reason)
-            .then(
-                user.send({ embeds: [userKickEmbed] }),
-            )
+            user.send({ embeds: [userKickEmbed] })
+                .then(() => {
+                    user.kick(reason);
+                })
         await interaction.reply({ embeds: [kickEmbed] });
         sendModerationLog(interaction, user, reason, 'Kick');
     },
