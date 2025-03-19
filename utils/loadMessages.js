@@ -1,9 +1,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const yaml = require('js-yaml');
-const colors = require('./colors');
+const colors = require('../events/utils/colors');
 function loadMessages() {
-    const filePath = path.join(__dirname, '..', '..', 'configs', 'messages.yml');
+    const filePath = path.join(__dirname, '..', 'configs', 'messages.yml');
     try {
         const fileContents = fs.readFileSync(filePath, 'utf8');
         const messages = yaml.load(fileContents);

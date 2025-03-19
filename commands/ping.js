@@ -1,10 +1,12 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { EmbedBuilder } = require('discord.js');
-const { loadMessages } = require('../events/utils/loadMessages');
+const { loadMessages } = require('../utils/loadMessages');
 const messages = loadMessages();
-const { loadColors } = require('../events/utils/loadColors');
+const { loadColors } = require('../utils/loadColors');
 const colorsConfig = loadColors();
-const { replacePlaceholders } = require('../utils/Placeholders');
+const { replacePlaceholders } = require('../utils/placeholders');
+
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('ping')

@@ -1,6 +1,6 @@
-const { loadMessages } = require('./loadMessages');
+const { loadMessages } = require('../../utils/loadMessages');
 const messages = loadMessages();
-const { loadColors } = require('./loadColors');
+const { loadColors } = require('../../utils/loadColors');
 const { EmbedBuilder } = require('discord.js');
 const colorsConfig = loadColors();
 

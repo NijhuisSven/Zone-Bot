@@ -6,10 +6,26 @@
 #   ${interaction.guild.id} - The ID of the guild where the interaction occurred
 #   ${interaction.channel.name} - The name of the channel where the interaction occurred
 #   ${interaction.channel.id} - The ID of the channel where the interaction occurred
+#   ${user} - The user that was mentioned in the interaction
+#   ${reason} - The reason that was provided in the interaction
+#   ${action} - The action that was performed in the interaction
 #   ${ping} - The ping of the bot
 interactionError:
   title: "Error"
   message: "An error occurred while processing your request. Please try again later."
+moderationLogs:
+  title: "Moderation Logs | ${action}"
+  message: |
+    **User:** ${user}
+    **Moderator:** ${interaction.user.tag}
+    **Reason:** ${reason}
 ping:
   title: "Ping"
   message: "Pong! ${ping}ms"
+kick:
+  title: "Kick"
+  message: "Successfully kicked ${user} for ${reason}"
+  error: "I was unable to kick ${user} for ${reason}"
+kickUser:
+  title: "Kicked!"
+  message: "You have been kicked from **${interaction.guild.name}** for **${reason}**"
